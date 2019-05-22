@@ -154,13 +154,6 @@ class App extends React.Component {
         this.focusCodemirror();
     };
 
-    handleSetQuery = (query, action) => {
-        const { _handleUpdateQueryAndAction } = this.props;
-
-        _handleUpdateQueryAndAction(query, action);
-        this.focusCodemirror();
-    };
-
     handleClearQuery = () => {
         this.handleUpdateQuery("", this.focusCodemirror);
     };
@@ -202,7 +195,6 @@ class App extends React.Component {
                     handleDiscardFrame={handleDiscardFrame}
                     handleRunQuery={this.handleRunQuery}
                     onSelectQuery={this.handleSelectQuery}
-                    onSetQuery={this.handleSetQuery}
                     handleUpdateAction={this.handleUpdateAction}
                     handleUpdateConnectedState={handleUpdateConnectedState}
                     handleUpdateQuery={this.handleUpdateQuery}

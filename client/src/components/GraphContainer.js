@@ -21,7 +21,6 @@ export default ({
     highlightPredicate,
     hoveredNode,
     nodesDataset,
-    onDeleteNode,
     onExpandNode,
     onSetPanelMinimized,
     onShowMoreNodes,
@@ -72,7 +71,6 @@ export default ({
             {selectedNode ? (
                 <NodeProperties
                     node={hoveredNode || selectedNode}
-                    onDeleteNode={onDeleteNode}
                     onExpandNode={onExpandNode}
                 />
             ) : null}

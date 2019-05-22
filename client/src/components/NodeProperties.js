@@ -12,7 +12,7 @@ import Table from "react-bootstrap/Table";
 
 import "../assets/css/NodeProperties.scss";
 
-export default function NodeProperties({ node, onDeleteNode, onExpandNode }) {
+export default function NodeProperties({ node, onExpandNode }) {
     if (!node) {
         return null;
     }
@@ -28,19 +28,11 @@ export default function NodeProperties({ node, onDeleteNode, onExpandNode }) {
                 aria-label="Node options"
             >
                 <Button
-                    className="mr-2"
                     variant="info"
                     size="sm"
                     onClick={() => onExpandNode(node.uid)}
                 >
                     Expand
-                </Button>
-                <Button
-                    variant="danger"
-                    size="sm"
-                    onClick={() => onDeleteNode(node)}
-                >
-                    Delete
                 </Button>
             </div>
 
